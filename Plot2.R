@@ -8,5 +8,5 @@ str(data)
 data$DateTime <- strptime(paste(dmy(data$Date), data$Time), format= "%Y-%m-%d %H:%M:%S")
 
 png('plot2.png', width=480, height=480)
-with(data, plot(DateTime, Global_active_power, type="l"))
+with(data, plot(DateTime, Global_active_power, type="l", ylab = "Global Active Power (kilowatts)"))
 dev.off()
